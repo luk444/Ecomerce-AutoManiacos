@@ -11,19 +11,16 @@ const categoryList = [
         name: 'Bujias'
     },
     {
-        name: 'Valvulas'
+        name: 'Bombas'
     },
     {
-        name: 'BOMBAS DUNCAN'
+        name: 'Juntas'
     },
     {
-        name: 'Juntas Premium'
+        name: 'Correas'
     },
     {
-        name: 'Correas distribucion'
-    },
-    {
-        name: 'Arboles de Leva'
+        name: 'Arbol de Leva'
     }
 ]
 
