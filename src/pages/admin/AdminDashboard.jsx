@@ -17,7 +17,7 @@ const AdminDashboard = () => {
             {/* Top */}
             <div className="top mb-5 px-5 mt-5">
                 <div className=" bg-red-50 py-5 border border-red-100 rounded-lg">
-                    <h1 className=" text-center text-2xl font-bold text-red-500">Admin Dashboard</h1>
+                    <h1 className=" text-center text-2xl font-bold text-red-500">Panel de Administrador</h1>
                 </div>
             </div>
 
@@ -34,7 +34,7 @@ const AdminDashboard = () => {
                            <div className="">
                             {/* Name  */}
                             <h1 className=" text-center text-lg">
-                                <span className=" font-bold">Name : </span>
+                                <span className=" font-bold">Nombre : </span>
                                 {user?.name}
                             </h1>
 
@@ -46,13 +46,13 @@ const AdminDashboard = () => {
 
                             {/* Date  */}
                             <h1 className=" text-center text-lg">
-                                <span className=" font-bold">Date : </span>
+                                <span className=" font-bold">Fecha : </span>
                                 {user?.date}
                             </h1>
 
                             {/* Role  */}
                             <h1 className=" text-center text-lg">
-                                <span className=" font-bold">Role : </span>
+                                <span className=" font-bold">Rol : </span>
                                 {user?.role}
                             </h1>
                         </div>
@@ -90,7 +90,7 @@ const AdminDashboard = () => {
 
                                     </div>
                                     <h2 className="title-font font-medium text-3xl text-red-400 fonts1" >{getAllProduct.length}</h2>
-                                    <p className=" text-red-500  font-bold" >Total Products</p>
+                                    <p className=" text-red-500  font-bold" >Total Productos</p>
                                 </div>
                             </Tab>
 
@@ -119,7 +119,7 @@ const AdminDashboard = () => {
                                         </svg>
                                     </div>
                                     <h2 className="title-font font-medium text-3xl text-red-400 fonts1" >{getAllOrder.length}</h2>
-                                    <p className=" text-red-500  font-bold" >Total Order</p>
+                                    <p className=" text-red-500  font-bold" >Total de Ordenes</p>
                                 </div>
                             </Tab>
 
@@ -147,7 +147,7 @@ const AdminDashboard = () => {
 
                                     </div>
                                     <h2 className="title-font font-medium text-3xl text-red-400 fonts1" >{getAllUser.length}</h2>
-                                    <p className=" text-red-500  font-bold" >Total Order</p>
+                                    <p className=" text-red-500  font-bold" >Total de Usuarios</p>
                                 </div>
                             </Tab>
                         </TabList>
