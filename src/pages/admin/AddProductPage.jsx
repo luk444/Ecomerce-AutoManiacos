@@ -63,20 +63,20 @@ const AddProductPage = () => {
     // Add Product Function
     const addProductFunction = async () => {
         if (product.title == "" || product.price == "" || product.productImageUrl == "" || product.category == "" || product.description == "") {
-            return toast.error("all fields are required")
+            return toast.error("Todos los campos son  obligatorios")
         }
 
         setLoading(true);
         try {
             const productRef = collection(fireDB, 'products');
             await addDoc(productRef, product)
-            toast.success("Add product successfully");
+            toast.success("Producto Agregado con Exito");
             navigate('/admin-dashboard')
             setLoading(false)
         } catch (error) {
             console.log(error);
             setLoading(false)
-            toast.error("Add product failed");
+            toast.error("Error al agregar el Producto");
         }
 
     }
@@ -90,7 +90,7 @@ const AddProductPage = () => {
                     {/* Top Heading  */}
                     <div className="mb-5">
                         <h2 className='text-center text-2xl font-bold text-red-500 '>
-                            Add Product
+                            Añadir Producto
                         </h2>
                     </div>
 
@@ -98,7 +98,7 @@ const AddProductPage = () => {
                     <div className="mb-3">
                         <input
                             type="text"
-                            name="title"
+                            name="Titulo"
                             value={product.title}
                             onChange={(e) => {
                                 setProduct({
@@ -106,7 +106,7 @@ const AddProductPage = () => {
                                     title: e.target.value
                                 })
                             }}
-                            placeholder='Product Title'
+                            placeholder='Titulo del Producto'
                             className='bg-red-50 border text-red-300 border-red-200 px-2 py-2 w-96 rounded-md outline-none placeholder-red-300'
                         />
                     </div>
@@ -114,8 +114,8 @@ const AddProductPage = () => {
                     {/* Input Two  */}
                     <div className="mb-3">
                         <input
-                            type="number"
-                            name="price"
+                            type="Numero"
+                            name="Precio"
                             value={product.price}
                             onChange={(e) => {
                                 setProduct({
@@ -123,7 +123,7 @@ const AddProductPage = () => {
                                     price: e.target.value
                                 })
                             }}
-                            placeholder='Product Price'
+                            placeholder='Precio del Producto'
                             className='bg-red-50 border text-red-300 border-red-200 px-2 py-2 w-96 rounded-md outline-none placeholder-red-300'
                         />
                     </div>
@@ -132,7 +132,7 @@ const AddProductPage = () => {
                     <div className="mb-3">
                         <input
                             type="text"
-                            name="productImageUrl"
+                            name="Url de la imagen del producto"
                             value={product.productImageUrl}
                             onChange={(e) => {
                                 setProduct({
@@ -156,7 +156,7 @@ const AddProductPage = () => {
                                 })
                             }}
                             className="w-full px-1 py-2 text-red-300 bg-red-50 border border-red-200 rounded-md outline-none  ">
-                            <option disabled>Select Product Category</option>
+                            <option disabled>Selecciona la Categoria del Producto</option>
                             {categoryList.map((value, index) => {
                                 const { name } = value
                                 return (
@@ -175,7 +175,7 @@ const AddProductPage = () => {
                                     ...product,
                                     description: e.target.value
                                 })
-                            }} name="description" placeholder="Product Description" rows="5" className=" w-full px-2 py-1 text-red-300 bg-red-50 border border-red-200 rounded-md outline-none placeholder-red-300 ">
+                            }} name="Descripcion" placeholder="Product Description" rows="5" className=" w-full px-2 py-1 text-red-300 bg-red-50 border border-red-200 rounded-md outline-none placeholder-red-300 ">
 
                         </textarea>
                     </div>
@@ -187,7 +187,7 @@ const AddProductPage = () => {
                             type='button'
                             className='bg-red-500 hover:bg-red-600 w-full text-white text-center py-2 font-bold rounded-md '
                         >
-                            Add Product
+                            Agregar Producto
                         </button>
                     </div>
                 </div>

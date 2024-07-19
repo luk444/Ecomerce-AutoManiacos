@@ -7,9 +7,9 @@ const Testimonial = () => {
                 {/* main  */}
                 <div className="container px-5 py-10 mx-auto">
                     {/* Heading  */}
-                    <h1 className=' text-center text-3xl font-bold text-black' >Testimonial</h1>
+                    <h1 className=' text-center text-3xl font-bold text-black' >Testimonios</h1>
                     {/* para  */}
-                    <h2 className=' text-center text-2xl font-semibold mb-10' >What our <span className=' text-red-500'>customers</span> are saying</h2>
+                    <h2 className=' text-center text-2xl font-semibold mb-10' >Lo que nuestros<span className=' text-red-500'>Clientes</span> estan diciendo</h2>
 
                     <div className="flex flex-wrap -m-4">
                         {/* Testimonial 1 */}

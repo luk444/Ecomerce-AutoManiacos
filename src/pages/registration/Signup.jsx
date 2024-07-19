@@ -66,7 +66,7 @@ const Signup = () => {
                 password: ""
             })
 
-            toast.success("Signup Successfully");
+            toast.success("Registro Exitoso");
 
             setLoading(false);
             navigate('/login')

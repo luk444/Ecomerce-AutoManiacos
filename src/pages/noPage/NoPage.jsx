@@ -2,7 +2,7 @@
 const NoPage = () => {
     return (
         <div>
-            No Page
+            No existe
         </div>
     );
 }

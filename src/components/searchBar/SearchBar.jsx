@@ -20,7 +20,7 @@ const SearchBar = () => {
             <div className="input flex justify-center">
                 <input
                     type="text"
-                    placeholder='Search here'
+                    placeholder='Buscar productos aqui'
                     onChange={(e) => setSearch(e.target.value)}
                     className=' bg-gray-200 placeholder-gray-400 rounded-lg px-2 py-2 w-96 lg:w-96 md:w-96 outline-none text-black '
                 />

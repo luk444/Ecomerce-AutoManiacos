@@ -163,7 +163,7 @@ const CartPage = () => {
                                                         <div className="ml-6 flex text-sm">
                                                             <button onClick={() => deleteCart(item)} type="button" className="flex items-center space-x-1 px-2 py-1 pl-0">
                                                                 <Trash size={12} className="text-red-500" />
-                                                                <span className="text-xs font-medium text-red-500">Remove</span>
+                                                                <span className="text-xs font-medium text-red-500">Eliminar</span>
                                                             </button>
                                                         </div>
                                                     </div>
@@ -173,7 +173,7 @@ const CartPage = () => {
                                     </>
                                     :
 
-                                    <h1>Not Found</h1>}
+                                    <h1>No Funciona</h1>}
                             </ul>
                         </section>
                         {/* Order summary */}
@@ -185,19 +185,19 @@ const CartPage = () => {
                                 id="summary-heading"
                                 className=" border-b border-gray-200 px-4 py-3 text-lg font-medium text-gray-900 sm:p-4"
                             >
-                                Price Details
+                                Detalles del Precio
                             </h2>
                             <div>
                                 <dl className=" space-y-1 px-2 py-4">
                                     <div className="flex items-center justify-between">
-                                        <dt className="text-sm text-gray-800">Price ({cartItemTotal} item)</dt>
+                                        <dt className="text-sm text-gray-800">Price ({cartItemTotal} Unidades)</dt>
                                         <dd className="text-sm font-medium text-gray-900">₹ {cartTotal}</dd>
                                     </div>
                                     <div className="flex items-center justify-between py-4">
                                         <dt className="flex text-sm text-gray-800">
-                                            <span>Delivery Charges</span>
+                                            <span>Gastos de envío</span>
                                         </dt>
-                                        <dd className="text-sm font-medium text-green-700">Free</dd>
+                                        <dd className="text-sm font-medium text-green-700">Gratis</dd>
                                     </div>
                                     <div className="flex items-center justify-between border-y border-dashed py-4 ">
                                         <dt className="text-base font-medium text-gray-900">Total Amount</dt>

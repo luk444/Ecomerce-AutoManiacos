@@ -81,22 +81,22 @@ const UserDashboard = () => {
                                                     <div className="p-8">
                                                         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-1">
                                                             <div className="mb-4">
-                                                                <div className="text-sm font-semibold text-black">Order Id</div>
+                                                                <div className="text-sm font-semibold text-black">Orden Id</div>
                                                                 <div className="text-sm font-medium text-gray-900">#{id}</div>
                                                             </div>
 
                                                             <div className="mb-4">
-                                                                <div className="text-sm font-semibold">Date</div>
+                                                                <div className="text-sm font-semibold">Fecha</div>
                                                                 <div className="text-sm font-medium text-gray-900">{date}</div>
                                                             </div>
 
                                                             <div className="mb-4">
-                                                                <div className="text-sm font-semibold">Total Amount</div>
+                                                                <div className="text-sm font-semibold">Monto Total</div>
                                                                 <div className="text-sm font-medium text-gray-900">₹ {price * quantity}</div>
                                                             </div>
 
                                                             <div className="mb-4">
-                                                                <div className="text-sm font-semibold">Order Status</div>                              
+                                                                <div className="text-sm font-semibold">Estado de la Orden</div>                              
                                                                   <div className="text-sm font-medium text-green-800 first-letter:uppercase">{status}</div>
                                                                
                                                             </div>

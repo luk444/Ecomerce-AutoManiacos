@@ -84,7 +84,7 @@ const UpdateProductPage = () => {
         try {
 
             await setDoc(doc(fireDB, 'products', id), product)
-            toast.success("Product Updated successfully")
+            toast.success("Producto editado con Exito")
             getAllProductFunction();
             setLoading(false)
             navigate('/admin-dashboard')
@@ -108,7 +108,7 @@ const UpdateProductPage = () => {
                     {/* Top Heading  */}
                     <div className="mb-5">
                         <h2 className='text-center text-2xl font-bold text-red-500 '>
-                            Update Product
+                            Editar Producto
                         </h2>
                     </div>
 
@@ -116,7 +116,7 @@ const UpdateProductPage = () => {
                     <div className="mb-3">
                         <input
                             type="text"
-                            name="title"
+                            name="Titulo"
                             value={product.title}
                             onChange={(e) => {
                                 setProduct({
@@ -124,7 +124,7 @@ const UpdateProductPage = () => {
                                     title: e.target.value
                                 })
                             }}
-                            placeholder='Product Title'
+                            placeholder='Titulo del Producto'
                             className='bg-red-50 border text-red-300 border-red-200 px-2 py-2 w-96 rounded-md outline-none placeholder-red-300'
                         />
                     </div>
@@ -132,8 +132,8 @@ const UpdateProductPage = () => {
                     {/* Input Two  */}
                     <div className="mb-3">
                         <input
-                            type="number"
-                            name="price"
+                            type="type"
+                            name="Precio"
                             value={product.price}
                             onChange={(e) => {
                                 setProduct({
@@ -141,7 +141,7 @@ const UpdateProductPage = () => {
                                     price: e.target.value
                                 })
                             }}
-                            placeholder='Product Price'
+                            placeholder='Precio del Producto'
                             className='bg-red-50 border text-red-300 border-red-200 px-2 py-2 w-96 rounded-md outline-none placeholder-red-300'
                         />
                     </div>
@@ -150,7 +150,7 @@ const UpdateProductPage = () => {
                     <div className="mb-3">
                         <input
                             type="text"
-                            name="productImageUrl"
+                            name="Url de imagen del producto"
                             value={product.productImageUrl}
                             onChange={(e) => {
                                 setProduct({
@@ -174,7 +174,7 @@ const UpdateProductPage = () => {
                                 })
                             }}
                             className="w-full px-1 py-2 text-red-300 bg-red-50 border border-red-200 rounded-md outline-none  ">
-                            <option disabled>Select Product Category</option>
+                            <option disabled>Selecciona categoria del producto</option>
                             {categoryList.map((value, index) => {
                                 const { name } = value
                                 return (
@@ -193,7 +193,7 @@ const UpdateProductPage = () => {
                                     ...product,
                                     description: e.target.value
                                 })
-                            }} name="description" placeholder="Product Description" rows="5" className=" w-full px-2 py-1 text-red-300 bg-red-50 border border-red-200 rounded-md outline-none placeholder-red-300 ">
+                            }} name="Descripcion" placeholder="Product Description" rows="5" className=" w-full px-2 py-1 text-red-300 bg-red-50 border border-red-200 rounded-md outline-none placeholder-red-300 ">
 
                         </textarea>
                     </div>
@@ -205,7 +205,7 @@ const UpdateProductPage = () => {
                             type='button'
                             className='bg-red-500 hover:bg-red-600 w-full text-white text-center py-2 font-bold rounded-md '
                         >
-                            Update Product
+                            Editar Producto
                         </button>
                     </div>
                 </div>

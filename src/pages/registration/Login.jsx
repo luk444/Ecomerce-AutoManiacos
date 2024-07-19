@@ -28,7 +28,7 @@ const Login = () => {
     const userLoginFunction = async () => {
         // validation 
         if (userLogin.email === "" || userLogin.password === "") {
-            toast.error("All Fields are required")
+            toast.error("Todos los campos son obligatorios")
         }
 
         setLoading(true);
@@ -49,7 +49,7 @@ const Login = () => {
                         email: "",
                         password: ""
                     })
-                    toast.success("Login Successfully");
+                    toast.success("Inicio de sesion exitoso");
                     setLoading(false);
                     if(user.role === "user") {
                         navigate('/user-dashboard');
@@ -101,7 +101,7 @@ const Login = () => {
                 {/* Input Two  */}
                 <div className="mb-5">
                     <input
-                        type="password"
+                        type="Contraseña"
                         placeholder='Contraseña'
                         value={userLogin.password}
                         onChange={(e) => {

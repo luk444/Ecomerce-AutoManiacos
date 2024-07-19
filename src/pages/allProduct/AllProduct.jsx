@@ -19,12 +19,12 @@ const AllProduct = () => {
     const addCart = (item) => {
         // console.log(item)
         dispatch(addToCart(item));
-        toast.success("Add to cart")
+        toast.success("Agregar al carrito")
     }
 
     const deleteCart = (item) => {
         dispatch(deleteFromCart(item));
-        toast.success("Delete cart")
+        toast.success("Eliminar del Carrito")
     }
 
     // console.log(cartItems)
@@ -37,7 +37,7 @@ const AllProduct = () => {
     <div className="py-8">
             {/* Heading  */}
             <div className="">
-                <h1 className=" text-center mb-5 text-2xl font-semibold">All Products</h1>
+                <h1 className=" text-center mb-5 text-2xl font-semibold">Todos los Productos</h1>
             </div>
 
             {/* main  */}
@@ -74,7 +74,7 @@ const AllProduct = () => {
                                                 <button
                                                     onClick={() => deleteCart(item)}
                                                     className=" bg-red-700 hover:bg-red-600 w-full text-white py-[4px] rounded-lg font-bold">
-                                                    Delete To Cart
+                                                    Eliminar del Carrito
                                                 </button>
 
                                                 : 
@@ -82,7 +82,7 @@ const AllProduct = () => {
                                                 <button
                                                     onClick={() => addCart(item)}
                                                     className=" bg-red-500 hover:bg-red-600 w-full text-white py-[4px] rounded-lg font-bold">
-                                                    Add To Cart
+                                                    Agregar al Carrito
                                                 </button>
                                             }
                                             </div>

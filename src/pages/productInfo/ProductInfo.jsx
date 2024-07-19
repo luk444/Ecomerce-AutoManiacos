@@ -40,12 +40,12 @@ const ProductInfo = () => {
     const addCart = (item) => {
         // console.log(item)
         dispatch(addToCart(item));
-        toast.success("Add to cart")
+        toast.success("Agregar al Carrito")
     }
 
     const deleteCart = (item) => {
         dispatch(deleteFromCart(item));
-        toast.success("Delete cart")
+        toast.success("Eliminar Carrito")
     }
 
     // console.log(cartItems)
@@ -157,7 +157,7 @@ const ProductInfo = () => {
                                         </div>
                                         <div className="mb-6">
                                             <h2 className="mb-2 text-lg font-bold text-gray-700 dark:text-gray-400">
-                                                Description :
+                                                Descripcion :
                                             </h2>
                                             <p>{product?.description}</p>
                                         </div>
@@ -170,14 +170,14 @@ const ProductInfo = () => {
                                                     onClick={() => deleteCart(product)}
                                                     className="w-full px-4 py-3 text-center text-white bg-red-500 border border--600  hover:bg-red-600 hover:text-gray-100  rounded-xl"
                                                 >
-                                                    Delete to cart
+                                                    Eliminar del Carrito
                                                 </button>
                                                 :
                                                 <button
                                                     onClick={() => addCart(product)}
                                                     className="w-full px-4 py-3 text-center text-red-600 bg-red-100 border border-red-600  hover:bg-red-600 hover:text-gray-100  rounded-xl"
                                                 >
-                                                    Add to cart
+                                                    Agregar al Carrito
                                                 </button>
                                             }
                                         </div>
@@ -185,7 +185,7 @@ const ProductInfo = () => {
                                             <button
                                                 className="w-full px-4 py-3 text-center text-gray-100 bg-red-600 border border-transparent dark:border-gray-700 hover:border-red-500 hover:text-red-700 hover:bg-red-100 rounded-xl"
                                             >
-                                                Buy now
+                                                Comprar Ahora
                                             </button>
                                         </div>
                                     </div>
