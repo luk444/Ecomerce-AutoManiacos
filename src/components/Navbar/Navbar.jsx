@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import SearchBar from "../searchBar/SearchBar";
 import { useSelector } from "react-redux";
 import { ShoppingCart, UserCircle, ChevronDown } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const Navbar = () => {
     const user = JSON.parse(localStorage.getItem('users'));
@@ -15,10 +15,27 @@ const Navbar = () => {
     };
 
     const cartItems = useSelector((state) => state.cart);
+    const dropdownRef = useRef(null); // Referencia al elemento del menú desplegable
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
     };
+
+    // Efecto para cerrar el menú al hacer clic fuera de él
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                // Hacer algo cuando se hace clic fuera del menú desplegable
+                setDropdownOpen(false); // Cierra el menú desplegable
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
     const navList = (
         <ul className="flex space-x-3 text-white font-medium text-md px-5">
@@ -59,7 +76,7 @@ const Navbar = () => {
                         <ChevronDown className="ml-1" />
                     </span>
                     {dropdownOpen && (
-                        <ul className="absolute right-0 mt-2 bg-white border border-gray-200 rounded shadow-lg py-1">
+                        <ul className="absolute right-0 mt-2 bg-white border border-gray-200 rounded shadow-lg py-1" ref={dropdownRef}>
                             {user.role === 'admin' && (
                                 <li>
                                     <Link to={'/admin-dashboard'} className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
@@ -88,7 +105,7 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="bg-red-600 sticky top-0">
+        <nav className="bg-red-600 sticky top-0 z-10">
             <div className="lg:flex lg:justify-between items-center py-3 lg:px-3">
                 <div className="left py-3 lg:py-0">
                     <Link to={'/'}>

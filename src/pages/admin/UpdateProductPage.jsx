@@ -8,6 +8,9 @@ import Loader from "../../components/loader/Loader";
 
 const categoryList = [
     {
+        name: 'Selecciona Categoria'
+    },
+    {
         name: 'Bujias'
     },
     {

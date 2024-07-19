@@ -8,6 +8,9 @@ import Loader from "../../components/loader/Loader";
 
 const categoryList = [
     {
+        name: 'Selecciona Categoria'
+    },
+    {
         name: 'Bujias'
     },
     {
@@ -50,27 +53,32 @@ const AddProductPage = () => {
         )
     });
 
-
-    // Add Product Function
     const addProductFunction = async () => {
-        if (product.title == "" || product.price == "" || product.productImageUrl == "" || product.category == "" || product.description == "") {
-            return toast.error("Todos los campos son  obligatorios")
+        // Validación de campos
+        if (
+            product.title === "" ||
+            product.price === "" ||
+            product.productImageUrl === "" ||
+            product.category === "Selecciona Categoria" ||  // incluir la opción de no selección
+            product.description === ""
+        ) {
+            return toast.error("Todos los campos son obligatorios");
         }
-
+    
         setLoading(true);
         try {
             const productRef = collection(fireDB, 'products');
             await addDoc(productRef, product)
-            toast.success("Producto Agregado con Exito");
-            navigate('/admin-dashboard')
-            setLoading(false)
+            toast.success("Producto Agregado con Éxito");
+            navigate('/admin-dashboard');
+            setLoading(false);
         } catch (error) {
             console.log(error);
-            setLoading(false)
+            setLoading(false);
             toast.error("Error al agregar el Producto");
         }
-
     }
+    
     return (
         <div>
             <div className='flex justify-center items-center h-screen'>

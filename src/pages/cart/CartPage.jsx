@@ -100,12 +100,12 @@ const CartPage = () => {
             <div className="container mx-auto px-4 max-w-7xl lg:px-0">
                 <div className="mx-auto max-w-2xl py-8 lg:max-w-7xl">
                     <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        Shopping Cart
+                        Carrito de compras
                     </h1>
                     <form className="mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
                         <section aria-labelledby="cart-heading" className="rounded-lg bg-white lg:col-span-8">
                             <h2 id="cart-heading" className="sr-only">
-                                Items in your shopping cart
+                                 Artículos en su carrito de compras
                             </h2>
                             <ul role="list" className="divide-y divide-gray-200">
                                 {cartItems.length > 0 ?
@@ -173,7 +173,7 @@ const CartPage = () => {
                                     </>
                                     :
 
-                                    <h1>No Funciona</h1>}
+                                    <h1>No hay articulos en su carrito</h1>}
                             </ul>
                         </section>
                         {/* Order summary */}
@@ -190,7 +190,7 @@ const CartPage = () => {
                             <div>
                                 <dl className=" space-y-1 px-2 py-4">
                                     <div className="flex items-center justify-between">
-                                        <dt className="text-sm text-gray-800">Price ({cartItemTotal} Unidades)</dt>
+                                        <dt className="text-sm text-gray-800">Precio ({cartItemTotal} Unidades)</dt>
                                         <dd className="text-sm font-medium text-gray-900">₹ {cartTotal}</dd>
                                     </div>
                                     <div className="flex items-center justify-between py-4">
@@ -200,7 +200,7 @@ const CartPage = () => {
                                         <dd className="text-sm font-medium text-green-700">Gratis</dd>
                                     </div>
                                     <div className="flex items-center justify-between border-y border-dashed py-4 ">
-                                        <dt className="text-base font-medium text-gray-900">Total Amount</dt>
+                                        <dt className="text-base font-medium text-gray-900">Monto Total</dt>
                                         <dd className="text-base font-medium text-gray-900">₹ {cartTotal}</dd>
                                     </div>
                                 </dl>
