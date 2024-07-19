@@ -23,7 +23,7 @@ const HomePageProductCard = () => {
 
     const deleteCart = (item) => {
         dispatch(deleteFromCart(item));
-        toast.success("Eliminar del Carrito")
+        toast.success("Eliminado del Carrito")
     }
 
     // console.log(cartItems)
