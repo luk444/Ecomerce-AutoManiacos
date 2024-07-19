@@ -23,10 +23,10 @@ const Navbar = () => {
     const navList = (
         <ul className="flex space-x-3 text-white font-medium text-md px-5">
             <li>
-                <Link to={'/'}>Inicio</Link>
+                <Link to={'/allproduct'}>Todos los productos</Link>
             </li>
             <li>
-                <Link to={'/allproduct'}>Productos</Link>
+                <Link to={'/'}>Nosotros</Link>
             </li>
             {!user && (
                 <>
